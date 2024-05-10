@@ -1,0 +1,43 @@
+$background-primary: #1f1f1f;
+$background-secondary: #333333;
+
+$secondary: #80b41e;
+$hover: #abe244;
+$margin: 10px;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background: $background-primary;
+    padding: $margin;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    .header-nav {
+        align-items: center;
+        ul {
+            list-style: none;
+            li {
+                display: inline-block;
+                margin: $margin;
+                a {
+                    color: $secondary;
+                    text-decoration: none;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    &:hover {
+                        color: $hover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+body {
+    height: 90vh;
+    background-color: $background-secondary;
+}
