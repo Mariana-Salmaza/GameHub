@@ -18,6 +18,9 @@ $margin: 10px;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
+    box-shadow: 0 0 15px #000;
+    top: 0;
+    position: fixed;
     .header-nav {
         align-items: center;
         float: right;
@@ -40,12 +43,55 @@ $margin: 10px;
         }
     }
     .header-logo {
-        width: 150px;
+        width: 125px;
         float: left;
     }
 }
 
 body {
-    height: 90vh;
     background-color: $background-secondary;
+    padding-top: 100px;
 }
+
+.container {
+    width: 50%;
+    margin: 4% 25%;
+    .emphasis {
+        color:  #47e947;
+    }
+}
+
+.banner-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+section {
+    padding: 20px 0px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    .flex-column {
+        width: 24%;
+        margin: 4px;
+    }
+}
+
+.footer {
+    color: #FFFFFF;
+    background: #171a21;
+    padding: 50px 0px;
+    text-align: center;
+
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+
+
