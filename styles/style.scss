@@ -1,9 +1,10 @@
 $background-primary: #1f1f1f;
 $background-secondary: #333333;
 
-$secondary: #80b41e;
-$hover: #abe244;
+$secondary: #89c220;
+$hover: #bfeb6d;
 $margin: 10px;
+$font: "Roboto Condensed", Arial, Tahoma;
 
 * {
     margin: 0;
@@ -21,15 +22,19 @@ $margin: 10px;
     box-shadow: 0 0 15px #000;
     top: 0;
     position: fixed;
-    .header-nav {
-        align-items: center;
+    .header-logo {
+        width: 80px;
+        float: left;
+    }
+    .header-menu {
         float: right;
         ul {
             list-style: none;
-            margin: 12px;
             li {
                 display: inline-block;
-                margin: $margin;
+                margin: 5px 15px;
+                font: 13px $font;
+                font-weight: bold;
                 a {
                     color: $secondary;
                     text-decoration: none;
@@ -42,10 +47,6 @@ $margin: 10px;
             }
         }
     }
-    .header-logo {
-        width: 125px;
-        float: left;
-    }
 }
 
 body {
@@ -53,17 +54,8 @@ body {
     padding-top: 100px;
 }
 
-.container {
-    width: 50%;
-    margin: 4% 25%;
-    .emphasis {
-        color:  #47e947;
-    }
-}
-
-.banner-img {
-    width: 100%;
-    border-radius: 10px;
+.emphasis {
+    color: #89c220;
 }
 
 section {
@@ -73,18 +65,23 @@ section {
 .flex {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 4% 25%;
     .flex-column {
-        width: 24%;
-        margin: 4px;
+        width: 20%;
+        .column-img {
+            width: 120%;
+            height: 120%;
+            border-radius: 6px;
+        }       
     }
 }
 
 .footer {
     color: #FFFFFF;
     background: #171a21;
-    padding: 50px 0px;
+    padding: 2% 0;
     text-align: center;
-
 }
 
 .whatsapp {
@@ -96,6 +93,14 @@ section {
 h2 {
     font-size: 1.2rem;
     text-align: center;
-    margin: 20px 0px;
+    margin: 20px 0;
 }
+
+
+.w-100 {
+    width: 50%;
+    margin: 4% 25%;
+    border-radius: 10px;
+}
+
 

@@ -16,30 +16,30 @@
   top: 0;
   position: fixed;
 }
-.header .header-nav {
-  align-items: center;
+.header .header-logo {
+  width: 80px;
+  float: left;
+}
+.header .header-menu {
   float: right;
 }
-.header .header-nav ul {
+.header .header-menu ul {
   list-style: none;
-  margin: 12px;
 }
-.header .header-nav ul li {
+.header .header-menu ul li {
   display: inline-block;
-  margin: 10px;
+  margin: 5px 15px;
+  font: 13px "Roboto Condensed", Arial, Tahoma;
+  font-weight: bold;
 }
-.header .header-nav ul li a {
-  color: #80b41e;
+.header .header-menu ul li a {
+  color: #89c220;
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
 }
-.header .header-nav ul li a:hover {
-  color: #abe244;
-}
-.header .header-logo {
-  width: 125px;
-  float: left;
+.header .header-menu ul li a:hover {
+  color: #bfeb6d;
 }
 
 body {
@@ -47,17 +47,8 @@ body {
   padding-top: 100px;
 }
 
-.container {
-  width: 50%;
-  margin: 4% 25%;
-}
-.container .emphasis {
-  color: #47e947;
-}
-
-.banner-img {
-  width: 100%;
-  border-radius: 10px;
+.emphasis {
+  color: #89c220;
 }
 
 section {
@@ -67,16 +58,22 @@ section {
 .flex {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 4% 25%;
 }
 .flex .flex-column {
-  width: 24%;
-  margin: 4px;
+  width: 20%;
+}
+.flex .flex-column .column-img {
+  width: 120%;
+  height: 120%;
+  border-radius: 6px;
 }
 
 .footer {
   color: #FFFFFF;
   background: #171a21;
-  padding: 50px 0px;
+  padding: 2% 0;
   text-align: center;
 }
 
@@ -89,7 +86,13 @@ section {
 h2 {
   font-size: 1.2rem;
   text-align: center;
-  margin: 20px 0px;
+  margin: 20px 0;
+}
+
+.w-100 {
+  width: 50%;
+  margin: 4% 25%;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
