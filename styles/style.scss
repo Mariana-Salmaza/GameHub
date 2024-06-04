@@ -54,9 +54,6 @@ body {
     padding-top: 100px;
 }
 
-.emphasis {
-    color: #89c220;
-}
 
 section {
     padding: 20px 0px;
@@ -77,12 +74,6 @@ section {
     }
 }
 
-.footer {
-    color: #FFFFFF;
-    background: #171a21;
-    padding: 2% 0;
-    text-align: center;
-}
 
 .whatsapp {
     position: fixed;
@@ -103,4 +94,29 @@ h2 {
     border-radius: 10px;
 }
 
+.who-we-are {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    color: #FFFFFF;
+    padding: 10% 25% 15% 25%;
+    font: 100% $font;
+} 
+.emphasis {
+    color: #89c220;
+    padding-top: 0px;
+}
 
+.games {
+    color: #89c220;
+    padding-top: 0px;
+}
+.footer {
+    color: #FFFFFF;
+    background: #171a21;
+    padding: 2% 0;
+    text-align: center;
+}

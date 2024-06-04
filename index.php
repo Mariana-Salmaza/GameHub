@@ -36,17 +36,12 @@
 					</a>
 				</li>
 				<li>
-					<a href="index.php?pagina=quemsomos">
-						Quem Somos
+					<a href="index.php?pagina=sobre">
+						Sobre
 					</a>
 				</li>
 				<li>
-					<a href="index.php?pagina=lancamentos">
-						Lançamentos
-					</a>
-				</li>
-				<li>
-					<a href="index.php?pagina=contato">
+					<a href="#contato">
 						Contato
 					</a>
 				</li>
@@ -66,9 +61,6 @@
 
             //recuperar a variavel pagina
             $pagina = $_GET["pagina"] ?? "home";
-			$pagina = $_GET["pagina"] ?? "quemsomos";
-			$pagina = $_GET["pagina"] ?? "lancamentos";
-
 
             // paginas/home.php
             $pagina = "paginas/{$pagina}.php";
@@ -83,26 +75,7 @@
 
 	</main>
 
-	<section class="emphasis">
-		<h2>Jogos em Destaque:</h2>
-			<div class="flex">
-				<div class="flex-column">
-					<img src="imagens/jogos.jpg" title="jogo1" alt="jogo1" class="column-img">  
-				</div>
-				<div class="flex-column">
-					<img src="imagens/jogos.jpg" title="jogo2" alt="jogo2" class="column-img">
-				</div>
-				<div class="flex-column">
-					<img src="imagens/jogos.jpg" title="jogo3" alt="jogo3" class="column-img">
-				</div>
-				<div class="flex-column">
-					<img src="imagens/jogos.jpg" title="jogo4" alt="jogo4" class="column-img">
-				</div>
-			</div>
-	</section>
-	
-
-	<footer class="footer">
+	<footer id="contato" class="footer">
 		<p>Desenvolvido por Mariana Salmaza ©2024 </p>
 	</footer>
 	<a href="https://web.whatsapp.com/" title="whatsapp" class="whatsapp">
