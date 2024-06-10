@@ -1,50 +1,53 @@
-* {
-  margin: 0;
-  padding: 0;
+.navbar {
+  background: #171a21;
 }
-
-.header {
-  background: #1f1f1f;
-  padding: 10px;
-  width: 100%;
-  height: 15vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  box-shadow: 0 0 15px #000;
-  top: 0;
-  position: fixed;
+.navbar .navbar-brand img {
+  height: 90px;
 }
-.header .header-logo {
-  width: 80px;
-  float: left;
-}
-.header .header-menu {
-  float: right;
-}
-.header .header-menu ul {
-  list-style: none;
-}
-.header .header-menu ul li {
-  display: inline-block;
-  margin: 5px 15px;
-  font: 13px "Roboto Condensed", Arial, Tahoma;
-  font-weight: bold;
-}
-.header .header-menu ul li a {
-  color: #89c220;
-  text-decoration: none;
-  font-weight: bold;
+.navbar .nav-link {
+  font: 18px "Roboto Condensed", Arial, Tahoma;
+  color: #FFFFFF;
   text-transform: uppercase;
 }
-.header .header-menu ul li a:hover {
-  color: #bfeb6d;
+.navbar .nav-link:hover {
+  color: #89c220;
+}
+.navbar .navbar-nav .nav-link.show {
+  color: #89c220;
+}
+.navbar .navbar-collapse {
+  align-items: end;
+}
+.navbar .navbar-toggler {
+  background-color: #FFFFFF;
+}
+.navbar .dropdown-menu {
+  background: #171a21;
+  border-radius: 0;
+  border-top: 5px solid #89c220;
+}
+.navbar .dropdown-menu .dropdown-item {
+  font: 16px "Roboto Condensed", Arial, Tahoma;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #89c220;
+}
+.navbar .dropdown-menu .dropdown-item:hover {
+  color: #89c220;
+}
+.navbar .btn {
+  font: 20px "Roboto Condensed", Arial, Tahoma;
+  border-radius: 0;
+  color: #89c220;
+}
+.navbar .btn .btn-info {
+  background-color: black;
+  color: #FFFFFF;
+  justify-items: center;
 }
 
 body {
   background-color: #333333;
-  padding-top: 100px;
 }
 
 section {
@@ -71,6 +74,10 @@ section {
   bottom: 10px;
   right: 10px;
 }
+.whatsapp img {
+  width: 2vw;
+  height: 4vh;
+}
 
 h2 {
   font-size: 1.2rem;
@@ -78,10 +85,11 @@ h2 {
   margin: 20px 0;
 }
 
-.w-100 {
-  width: 50%;
-  margin: 4% 25%;
-  border-radius: 10px;
+.banner {
+  width: 100vw;
+  height: 75vh;
+  padding: 0%;
+  overflow-x: hidden;
 }
 
 .who-we-are {
@@ -96,21 +104,28 @@ h2 {
   font: 100% "Roboto Condensed", Arial, Tahoma;
 }
 
-.emphasis {
-  color: #89c220;
-  padding-top: 0px;
-}
-
-.games {
-  color: #89c220;
-  padding-top: 0px;
-}
-
 .footer {
   color: #FFFFFF;
   background: #171a21;
-  padding: 2% 0;
+  padding: 2% 2%;
   text-align: center;
+  width: 100vw;
+  height: 12vh;
+}
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.game1, .game2, .game3, .game4 {
+  color: #89c220;
+  text-align: center;
+  padding: 15%;
+}
+
+.carousel-item {
+  width: 100vw;
+  height: 60vh;
 }
 
 /*# sourceMappingURL=style.css.map */
