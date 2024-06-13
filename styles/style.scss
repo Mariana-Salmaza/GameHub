@@ -154,3 +154,18 @@ h2 {
     height: 60vh;
 
 }
+
+.text-center {
+    color: #a5fa09;
+    padding: 3%;
+}
+
+.col-md-3 {
+    padding: 2% 5%;
+}
+
+h2 {
+    color: $secondary;
+    text-transform: uppercase;
+    font: 10px solid $font;
+}

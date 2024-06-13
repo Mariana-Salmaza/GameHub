@@ -128,4 +128,19 @@ h2 {
   height: 60vh;
 }
 
+.text-center {
+  color: #a5fa09;
+  padding: 3%;
+}
+
+.col-md-3 {
+  padding: 2% 5%;
+}
+
+h2 {
+  color: #89c220;
+  text-transform: uppercase;
+  font: 10px solid "Roboto Condensed", Arial, Tahoma;
+}
+
 /*# sourceMappingURL=style.css.map */
