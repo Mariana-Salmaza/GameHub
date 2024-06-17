@@ -12,17 +12,16 @@
 
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/all.min.css">
-	<link rel="stylesheet" href="css/aos.css">
-	<link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="styles/style.css">
 
-
-	<link rel="shortcut icon" href="./imagens/icone.png">
-
+    <link rel="shortcut icon" href="./imagens/icone.png">
 
 </head>
 
@@ -42,20 +41,17 @@
 						<a class="nav-link" aria-current="page" href="home">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="sobre">Sobre</a>
+						<a class="nav-link" href="equipe">Equipe</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="suporte">Suporte</a>
 					</li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<a class="nav-link dropdown-toggle" href="home" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Games
 						</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="game1">Jogo1</a></li>
-							<li><a class="dropdown-item" href="game2">Jogo2</a></li>
-							<li><a class="dropdown-item" href="game3">Jogo3</a></li>
-							<li><a class="dropdown-item" href="game4">Jogo4</a></li>
+							<li><a class="dropdown-item" href="gamesPage">Games</a></li>
 						</ul>
 					</li>
 				</ul>

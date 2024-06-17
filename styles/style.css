@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .navbar {
   background: #171a21;
 }
@@ -10,7 +11,7 @@
   text-transform: uppercase;
 }
 .navbar .nav-link:hover {
-  color: #89c220;
+  color: greenyellow;
 }
 .navbar .navbar-nav .nav-link.show {
   color: #89c220;
@@ -64,9 +65,10 @@ section {
   width: 20%;
 }
 .flex .flex-column .column-img {
-  width: 120%;
-  height: 120%;
+  width: 100%;
+  height: auto;
   border-radius: 6px;
+  overflow: scroll;
 }
 
 .whatsapp {
@@ -85,13 +87,6 @@ h2 {
   margin: 20px 0;
 }
 
-.banner {
-  width: 100vw;
-  height: 75vh;
-  padding: 0%;
-  overflow-x: hidden;
-}
-
 .who-we-are {
   text-align: left;
   display: flex;
@@ -104,12 +99,59 @@ h2 {
   font: 100% "Roboto Condensed", Arial, Tahoma;
 }
 
+.carousel-item {
+  position: relative;
+  display: none;
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  overflow: hidden;
+  /* Garante que as imagens não saiam do container */
+}
+
+.text-center {
+  color: greenyellow;
+  padding: 3%;
+}
+
+.col-md-3 {
+  padding: 2% 4%;
+  margin: auto;
+}
+
+.text-center-color {
+  color: black;
+  background-color: white;
+  font: "Jersey 25", Inter, Arial;
+}
+
+.text-center-strong {
+  color: black;
+  text-align: center;
+  font: 20px "Roboto Condensed", Arial, Tahoma;
+  background-color: white;
+}
+
+h2 {
+  color: #89c220;
+  text-transform: uppercase;
+  font: 10px solid "Roboto Condensed", Arial, Tahoma;
+}
+
+.btn-info {
+  font: 18px "Roboto Condensed", Arial, Tahoma;
+  background-color: greenyellow;
+  border: initial;
+}
+.btn-info:hover {
+  background-color: #83da02;
+}
+
 .footer {
   color: #FFFFFF;
   background: #171a21;
   padding: 2% 2%;
   text-align: center;
-  width: 100vw;
   height: 12vh;
 }
 .footer p {
@@ -117,30 +159,38 @@ h2 {
   font-size: 1rem;
 }
 
-.game1, .game2, .game3, .game4 {
-  color: #89c220;
-  text-align: center;
-  padding: 15%;
+.row {
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
 }
 
-.carousel-item {
-  width: 100vw;
-  height: 60vh;
+.col-12 {
+  color: white;
+  font: 20px "Roboto Condensed", Arial, Tahoma;
+}
+.col-12 .imgcapa {
+  height: 100%;
 }
 
-.text-center {
-  color: #a5fa09;
-  padding: 3%;
+.Container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.col-md-3 {
-  padding: 2% 5%;
+.bannermeu {
+  width: 100%;
+  height: 65vh;
 }
 
-h2 {
-  color: #89c220;
-  text-transform: uppercase;
-  font: 10px solid "Roboto Condensed", Arial, Tahoma;
+.card {
+  height: 100%;
+  background-color: initial;
+}
+
+.row > * {
+  max-width: 70%;
 }
 
 /*# sourceMappingURL=style.css.map */
