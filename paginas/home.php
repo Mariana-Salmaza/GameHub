@@ -1,20 +1,29 @@
 <?php
-$url = "http://localhost/GameHub/api/banner.php";
+$url = "http://localhost/GameHub/api/games.php";
 
 $dadosJson = file_get_contents($url);
 
 $dadosBanner = json_decode($dadosJson);
 
+
+foreach ($dadosBanner as $dados) {
+
+}
 ?>
 
-<div id="carouselExample" class="carousel slide" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
+        <div class="carousel-item active">
+                <a href="">
+                    <img src="http://localhost/GameHub/imagens/bannerjogoD.png" class="d-block w-100" alt="">
+                </a>
+            </div>
         <?php
         foreach ($dadosBanner as $dados) {
         ?>
-            <div class="carousel-item active">
-                <a href="game/<?= $dados->id_game ?>">
-                    <img src="<?= $dados->imagem ?>" class="d-block w-100" alt="<?= $dados->nome ?>">
+            <div class="carousel-item">
+                <a href="gamesPage/<?= $dados->id ?>">
+                    <img src="<?= $dados->banner ?>" class="d-block w-100" alt="<?= $dados->nome ?>">
                 </a>
             </div>
         <?php
@@ -41,7 +50,7 @@ $dadosBanner = json_decode($dadosJson);
                 <div class="card-body text-center-strong">
                     <p><strong>Enemy War</strong></p>
                     <p>
-                        <a href="#" title="Detalhes" class="btn btn-info">
+                        <a href="gamesPage/<?= $dados->id ?>" title="Detalhes" class="btn btn-info">
                             Detalhes
                         </a>
                     </p>
@@ -50,11 +59,11 @@ $dadosBanner = json_decode($dadosJson);
         </div>
         <div class="col-12 col-md-4 mt-3">
             <div class="card" data-aos="fade-up" data-aos-delay="50">
-                <img src="imagens/bannerjogoD.PNG" alt="Space Soldier Survial" class="card-img-top" loading="lazy">
+                <img src="imagens/bannerjogoD.png" alt="" class="card-img-top" loading="lazy">
                 <div class="card-body text-center-strong">
                     <p><strong>Space Soldier Survival</strong></p>
                     <p>
-                        <a href="#" title="Detalhes" class="btn btn-info">
+                        <a href="gamesPage/<?= $dados->id ?>" title="Detalhes" class="btn btn-info">
                             Detalhes
                         </a>
                     </p>
@@ -92,6 +101,19 @@ $dadosBanner = json_decode($dadosJson);
                 <img src="imagens/bo6.jpg" alt="Tekken 8" class="card-img-top" loading="lazy">
                 <div class="card-body text-center-strong">
                     <p><strong>Tekken 8</strong></p>
+                    <p>
+                        <a href="#" title="Detalhes" class="btn btn-info">
+                            Detalhes
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 mt-3">
+            <div class="card" data-aos="fade-up" data-aos-delay="50">
+                <img src="imagens/fotojogoLuiz1.jpeg" alt="" class="card-img-top" loading="lazy">
+                <div class="card-body text-center-strong">
+                    <p><strong>FC 2024</strong></p>
                     <p>
                         <a href="#" title="Detalhes" class="btn btn-info">
                             Detalhes

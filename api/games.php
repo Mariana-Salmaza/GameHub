@@ -24,7 +24,4 @@
     Pule por obtáculos e derrote inimigos, e talvez você conseguirá salvar timóteo.</p>",
     "poster"=>"{$path}posterLuiz","banner"=>"{$path}fotojogoLuiz2.jpeg");
 
-    // $games[5] = array("id"=>5, "nome"=>"Tekken 8", "descricao"=>"<p>Tekken 8 (鉄拳8) é um jogo eletrônico de luta desenvolvido pela Bandai Namco Studios e Arika.[1] Bandai Namco Entertainment publicou o jogo para PlayStation 5, Windows e Xbox Series X/S em 26 de janeiro de 2024.[2] É a oitava entrada principal (e décima, no geral) da série Tekken. O modo história do jogo, intitulado The Dark Awakens, se passa seis meses após os acontecimentos de seu antecessor e se concentra no confronto final entre os personagens principais, pai e filho Kazuya Mishima e Jin Kazama, com este último desejando matar o primeiro para acabar com o caos dentro de sua linhagem familiar. A história do jogo apresenta 32 personagens antigos e novos, cada um com sua própria narrativa que contribui para a história geral.</p>",
-    // "poster"=>"{$path}poster_tekken8.jpg","banner"=>"{$path}tekken8.jpg","trailer"=>"https://www.youtube.com/embed/2cWB0uUPC78");
-
     echo json_encode($games);

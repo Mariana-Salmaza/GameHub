@@ -25,7 +25,25 @@
 
 </head>
 
+
+
+
+
+
 <body>
+
+<?php
+$url = "http://localhost/GameHub/api/games.php";
+
+$dadosJson = file_get_contents($url);
+
+$dadosBanner = json_decode($dadosJson);
+
+foreach ($dadosBanner as $dados) {
+
+}
+?>
+
 
 	<nav class="navbar navbar-expand-lg">
 		<div class="container-fluid">
@@ -51,7 +69,16 @@
 							Games
 						</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="gamesPage">Games</a></li>
+						<?php
+        foreach ($dadosBanner as $dados) {
+        ?>
+							<li><a class="dropdown-item" href="gamesPage/<?=$dados->id?>"><?= $dados->nome ?></a></li>
+
+
+
+							<?php
+        }
+        ?>
 						</ul>
 					</li>
 				</ul>
@@ -61,28 +88,31 @@
 	
 
 	<main>
-		<?php
-		//print_r($_GET);
-		$pagina = "home";
-		//verificar se foi clicado em algum menu
-		if (isset($_GET["pagina"])) {
-			$pagina = $_GET["pagina"] ?? "home";
-			// games/1
-			$pagina = explode("/", $pagina);
-			//print_r($pagina);
-			$codigo = $pagina[1] ?? NULL;
-			$pagina = $pagina[0] ?? "home";
-		}
+	
+<?php
 
-		$pagina = "paginas/{$pagina}.php";
+    if (isset($_GET["param"])) {
+      $param = $_GET["param"];
+      $p = explode("/", $param);
+    }
 
-		if (file_exists($pagina)) {
-			include $pagina;
-		} else {
-			include "./paginas/erro.php";
-		}
-		?>
+    $page = $p[0] ?? "home";
+    $jogo = $p[1] ?? NULL;
 
+    if ($page == "jogo") {
+      $pagina = "jogo/{$jogo}.php";
+
+    } else {
+      $pagina = "paginas/{$page}.php";
+    }
+
+    if (file_exists($pagina)) {
+      include $pagina;
+    } else {
+      include "paginas/erro.php";
+    }
+
+    ?>
 	</main>
 
 	<footer id="contato" class="footer">

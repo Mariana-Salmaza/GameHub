@@ -1,6 +1,18 @@
+<?php
+
+$id = $p[1] ?? NULL;
+
+$dadosApi = file_get_contents("http://localhost/GameHub/api/games.php/");
+
+$dadosApi = json_decode($dadosApi);
+
+$jogo = $dadosApi->$id;
+
+?>
+
 <div class="Container">
-    <img src="imagens/bannerMeu.png" alt="Enemy War" title="Enemy War" class="bannermeu">
-    <h1 class="text-center">Enemy War</h1>
+    <img src="<?=$jogo->banner?>" alt="Enemy War" title="Enemy War" class="bannermeu">
+    <h1 class="text-center"><?=$jogo->nome?></h1>
 
     <div class="row">
         <div class="col-12 col-md-3 aos-init aos-animate" data-aos="fade-left">
