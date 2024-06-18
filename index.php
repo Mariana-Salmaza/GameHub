@@ -12,16 +12,16 @@
 
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="styles/style.css">
 
-    <link rel="shortcut icon" href="./imagens/icone.png">
+	<link rel="shortcut icon" href="./imagens/icone.png">
 
 </head>
 
@@ -32,17 +32,16 @@
 
 <body>
 
-<?php
-$url = "http://localhost/GameHub/api/games.php";
+	<?php
+	$url = "http://localhost/GameHub/api/games.php";
 
-$dadosJson = file_get_contents($url);
+	$dadosJson = file_get_contents($url);
 
-$dadosBanner = json_decode($dadosJson);
+	$dadosBanner = json_decode($dadosJson);
 
-foreach ($dadosBanner as $dados) {
-
-}
-?>
+	foreach ($dadosBanner as $dados) {
+	}
+	?>
 
 
 	<nav class="navbar navbar-expand-lg">
@@ -69,50 +68,49 @@ foreach ($dadosBanner as $dados) {
 							Games
 						</a>
 						<ul class="dropdown-menu">
-						<?php
-        foreach ($dadosBanner as $dados) {
-        ?>
-							<li><a class="dropdown-item" href="gamesPage/<?=$dados->id?>"><?= $dados->nome ?></a></li>
+							<?php
+							foreach ($dadosBanner as $dados) {
+							?>
+								<li><a class="dropdown-item" href="gamesPage/<?= $dados->id ?>"><?= $dados->nome ?></a></li>
 
 
 
 							<?php
-        }
-        ?>
+							}
+							?>
 						</ul>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	
+
 
 	<main>
-	
-<?php
 
-    if (isset($_GET["param"])) {
-      $param = $_GET["param"];
-      $p = explode("/", $param);
-    }
+		<?php
 
-    $page = $p[0] ?? "home";
-    $jogo = $p[1] ?? NULL;
+		if (isset($_GET["param"])) {
+			$param = $_GET["param"];
+			$p = explode("/", $param);
+		}
 
-    if ($page == "jogo") {
-      $pagina = "jogo/{$jogo}.php";
+		$page = $p[0] ?? "home";
+		$jogo = $p[1] ?? NULL;
 
-    } else {
-      $pagina = "paginas/{$page}.php";
-    }
+		if ($page == "jogo") {
+			$pagina = "jogo/{$jogo}.php";
+		} else {
+			$pagina = "paginas/{$page}.php";
+		}
 
-    if (file_exists($pagina)) {
-      include $pagina;
-    } else {
-      include "paginas/erro.php";
-    }
+		if (file_exists($pagina)) {
+			include $pagina;
+		} else {
+			include "paginas/erro.php";
+		}
 
-    ?>
+		?>
 	</main>
 
 	<footer id="contato" class="footer">
@@ -126,8 +124,8 @@ foreach ($dadosBanner as $dados) {
 	<script src="js/aos.js"></script>
 	<script src="js/fslightbox.js"></script>
 	<script>
-        AOS.init();
-    </script>
+		AOS.init();
+	</script>
 
 </body>
 

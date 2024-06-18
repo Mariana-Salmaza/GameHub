@@ -15,7 +15,7 @@ foreach ($dadosBanner as $dados) {
     <div class="carousel-inner">
         <div class="carousel-item active">
                 <a href="">
-                    <img src="http://localhost/GameHub/imagens/bannerjogoD.png" class="d-block w-100" alt="">
+                    <img src="http://localhost/GameHub/imagens/bannerMeu.png" class="d-block w-100" alt="">
                 </a>
             </div>
         <?php
@@ -76,7 +76,7 @@ foreach ($dadosBanner as $dados) {
                 <div class="card-body text-center-strong">
                     <p><strong>Parabellum</strong></p>
                     <p>
-                        <a href="#" title="Detalhes" class="btn btn-info">
+                        <a href="gamesPage/<?= $dados->id ?>" title="Detalhes" class="btn btn-info">
                             Detalhes
                         </a>
                     </p>
@@ -89,7 +89,7 @@ foreach ($dadosBanner as $dados) {
                 <div class="card-body text-center-strong">
                     <p><strong>FC 2024</strong></p>
                     <p>
-                        <a href="#" title="Detalhes" class="btn btn-info">
+                        <a href="gamesPage/<?= $dados->id ?>" title="Detalhes" class="btn btn-info">
                             Detalhes
                         </a>
                     </p>
@@ -102,7 +102,7 @@ foreach ($dadosBanner as $dados) {
                 <div class="card-body text-center-strong">
                     <p><strong>Tekken 8</strong></p>
                     <p>
-                        <a href="#" title="Detalhes" class="btn btn-info">
+                        <a href="gamesPage/<?= $dados->id ?>" title="Detalhes" class="btn btn-info">
                             Detalhes
                         </a>
                     </p>
@@ -115,7 +115,7 @@ foreach ($dadosBanner as $dados) {
                 <div class="card-body text-center-strong">
                     <p><strong>FC 2024</strong></p>
                     <p>
-                        <a href="#" title="Detalhes" class="btn btn-info">
+                        <a href="gamesPage/<?= $dados->id ?>" title="Detalhes" class="btn btn-info">
                             Detalhes
                         </a>
                     </p>

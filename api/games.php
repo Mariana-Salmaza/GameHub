@@ -19,9 +19,9 @@
     $games[3] = array("id"=>3, "nome"=>"Parabellum", "descricao"=>"<p>Você presencia Alexander Springovisk em ação através de câmeras de segurança, ele é um agente altamente habilidoso e capacitado para resolver qualquer missão que caia em sua responsabilidade. Seu personagem é um agente especial de missões extra-officiais, extremamente eficiente em seus metodos, e seu lema é missão dada é missão cumprida.</p>",
     "poster"=>"{$path}posterJulio.png","banner"=>"{$path}BannerParabellumJulio.png");
 
-    $games[4] = array("id"=>4, "nome"=>"LeMinotaur", "descricao"=>"<p>você é um minotauro tentando escapar do seu labirinto de plataformas. De o seu melhor!!
+    $games[4] = array("id"=>4, "nome"=>"LeMinotaur", "descricao"=>"<p>Você é um Minotauro tentando escapar do seu labirinto de plataformas. De o seu melhor!!
     Um rei prendeu timóteo, e encheu seu caminho de armadilhas, no entanto existe uma chance de escapar. 
     Pule por obtáculos e derrote inimigos, e talvez você conseguirá salvar timóteo.</p>",
-    "poster"=>"{$path}posterLuiz","banner"=>"{$path}fotojogoLuiz2.jpeg");
+    "poster"=>"{$path}posterLuiz.png","banner"=>"{$path}fotojogoLuiz2.jpeg");
 
     echo json_encode($games);

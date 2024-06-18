@@ -16,11 +16,11 @@ $jogo = $dadosApi->$id;
 
     <div class="row">
         <div class="col-12 col-md-3 aos-init aos-animate" data-aos="fade-left">
-            <img class="imgcapa" src="imagens/capa.png" class="w-100">
+            <img class="imgcapa" src="<?=$jogo->poster?>" class="w-100">
         </div>
 
         <div class="col-12 col-md-7 aos-init aos-animate" data-aos="fade-right">
-            <p>
+            <p><?=$jogo->descricao?>
                 O jogo "Enemy War" é uma emocionante experiência de guerra, projetada para um jogador em uma única fase desafiadora.
                 No papel do herói solitário, você enfrentará não apenas dois inimigos comuns, mas também um chefe supremamente poderoso que lidera as forças adversárias.
                 Sua missão é superar obstáculos mortais, derrotando cada um dos três inimigos que cruzarem seu caminho.
