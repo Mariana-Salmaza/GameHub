@@ -40,9 +40,11 @@ $jogo = $dadosApi->$id;
         <style>
         .gallery-item {
             margin-bottom: 30px;
+            justify-content: center;
+            max-width: 100%;
         }
         .gallery-item img {
-            width: 100%;
+            max-width: 100%;
             height: auto;
             border-radius: 5px;
             transition: transform 0.2s;

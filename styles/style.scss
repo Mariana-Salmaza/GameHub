@@ -1,4 +1,5 @@
-$background-primary: #171a21;;
+$background-primary: #171a21;
+;
 $background-secondary: #333333;
 
 $secondary: #89c220;
@@ -8,22 +9,28 @@ $font1: "Jersey 25", Inter, Arial;
 $font: "Roboto Condensed", Arial, Tahoma;
 
 .navbar {
-    background: #171a21;;
+    background: #171a21;
+    ;
+
     .navbar-brand img {
         height: 90px;
     }
+
     .nav-link {
         font: 18px $font;
         color: #FFFFFF;
         text-transform: uppercase;
+
         &:hover {
             color: greenyellow;
         }
     }
+
     .navbar-nav .nav-link.show {
         color: $secondary;
     }
-    .navbar-collapse  {
+
+    .navbar-collapse {
         align-items: end;
 
     }
@@ -31,46 +38,51 @@ $font: "Roboto Condensed", Arial, Tahoma;
     .navbar-toggler {
         background-color: #FFFFFF;
     }
+
     .dropdown-menu {
         background: $background-primary;
         border-radius: 0;
-        border-top: 5px solid $secondary; 
+        border-top: 5px solid $secondary;
+
         .dropdown-item {
             font: 16px $font;
             text-transform: uppercase;
             font-weight: bold;
             color: $secondary;
+
             &:hover {
                 color: $secondary;
             }
         }
     }
+
     .btn {
         font: 20px $font;
         border-radius: 0;
         color: $secondary;
+
         .btn-info {
-        background-color: black;
-        color: #FFFFFF;
-        justify-items: center;
+            background-color: black;
+            color: #FFFFFF;
+            justify-items: center;
 
         }
     }
-    
+
 
 }
 
-    
+
 body {
     background-color: $background-secondary;
-    
-    
+
+
 }
 
 
 section {
     padding: 20px 0px;
-    
+
 }
 
 .flex {
@@ -78,16 +90,18 @@ section {
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 4% 25%;
+
     .flex-column {
         width: 20%;
+
         .column-img {
             width: 100%;
             height: auto;
             border-radius: 6px;
             overflow: scroll;
-            
-        }       
-    } 
+
+        }
+    }
 }
 
 
@@ -95,6 +109,7 @@ section {
     position: fixed;
     bottom: 10px;
     right: 10px;
+
     img {
         width: 2vw;
         height: 4vh;
@@ -105,7 +120,7 @@ h2 {
     font-size: 1.2rem;
     text-align: center;
     margin: 20px 0;
-    
+
 }
 
 .who-we-are {
@@ -117,8 +132,9 @@ h2 {
     padding-top: 0px;
     color: #FFFFFF;
     padding: 10% 25% 15% 25%;
-    font: 100% $font;  
-} 
+    font: 100% $font;
+}
+
 // .emphasis {
 //     color: #89c220;
 //     padding-top: 0px;
@@ -131,21 +147,28 @@ h2 {
 
 
 .carousel-item {
-    position:relative;
+    position: relative;
     display: none;
     float: left;
     width: 100%;
     margin-right: -100%;
-    overflow: hidden; /* Garante que as imagens não saiam do container */
-    
+    overflow: hidden;
+
+    .carousel-item img {
+        max-width: 100%;
+        max-height: 300vh;
+    }
+
 }
 
 
 
 .text-center {
-    color: greenyellow; 
+    color: greenyellow;
     padding: 3%;
-    
+    display: flex;
+    justify-content: center;
+
 }
 
 .col-md-3 {
@@ -159,6 +182,7 @@ h2 {
     background-color: white;
     font: $font1;
 }
+
 .text-center-strong {
     color: black;
     text-align: center;
@@ -175,23 +199,26 @@ h2 {
 .btn-info {
     font: 18px "Roboto Condensed", Arial, Tahoma;
     background-color: greenyellow;
+
     &:hover {
         background-color: rgb(131, 218, 2);
     }
+
     border: initial;
 }
 
-.footer {
-    color: #FFFFFF;
-    background: #171a21;
-    padding: 2% 2%;
-    text-align: center;
-    height: 12vh;
-    p {
-        margin: 0;
-        font-size: 1rem;
-    }
-}
+// .footer {
+//     color: #FFFFFF;
+//     background: #171a21;
+//     padding: 2% 2%;
+//     text-align: center;
+//     height: 12vh;
+//     margin: 5vh 0 0 0;
+//     p {
+//         margin: 0;
+//         font-size: 1rem;
+//     }
+// }
 
 
 
@@ -204,9 +231,10 @@ h2 {
 .col-12 {
     color: white;
     font: 20px "Roboto Condensed", Arial, Tahoma;
+
     .imgcapa {
         height: 100%;
-        
+
     }
 }
 
@@ -218,17 +246,95 @@ h2 {
     margin-right: auto;
 }
 
-.bannermeu {
-    width: 100%;
-    height: 65vh;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }
 
 .card {
     height: 100%;
     background-color: initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .card-img-top {
+        width: 100%;
+        height: 200px;
+        /* Defina a altura fixa desejada */
+        object-fit: cover;
+
+        /* Garante que a imagem cubra o espaço definido */
+        .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .card-body p {
+                margin: 10px 0;
+            }
+        }
+
+    }
 }
+
+
+.bannermeu {
+    width: 100%;
+    height: 65vh;
+}
+
+
 
 .row>* {
     max-width: 100%;
 }
 
+.footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+
+    .socialIcons {
+        display: flex;
+        justify-content: center;
+
+        a {
+            text-decoration: none;
+            padding: 10px;
+            background-color: black;
+            margin: 10px;
+            border-radius: 50%;
+
+            a i {
+                font-size: 2.5rem;
+                color: white;
+            }
+
+
+        }
+
+    }
+
+
+}
+
+.footerBottom {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+
+    P {
+        color: white;
+    }
+
+    .designer {
+        opacity: 0.7;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 400;
+        margin: 0px 1px;
+    }
+}
