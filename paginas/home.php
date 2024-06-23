@@ -60,8 +60,11 @@ $dadosBanner = json_decode($JsonBanner);
                     <div class="card-body text-center-strong">
                         <p><strong><?= $dados->nome ?></strong></p>
                         <p>
-                            <a href="gamesPage/<?= $dados->id ?>" title="Detalhes" class="btn btn-info">
-                                Detalhes
+                            <a href="gamesPage/<?= $dados->id ?>" title="Detalhes" class="btn btn-info me-5">
+                                <i class="fas fa-search"></i> Detalhes
+                            </a>
+                            <a href="<?= $dados->jogo ?>" title="Jogar" class="btn btn-info">
+                                <i class="bi bi-controller"></i> Jogar
                             </a>
                         </p>
                     </div>

@@ -15,9 +15,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/all.min.css">
@@ -66,6 +65,10 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#suporte">Suporte</a>
 					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="formulario">Formulário</a>
+					</li>
+
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="home" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Games
@@ -90,31 +93,35 @@
 
 
 	<main>
-
 		<?php
+		// Defina o valor padrão para a página
+		$pagina = "home";
+		$codigo = null;
 
-		if (isset($_GET["param"])) {
-			$param = $_GET["param"];
-			$p = explode("/", $param);
+		// Verifique se o parâmetro "pagina" está presente na URL
+		if (isset($_GET["pagina"])) {
+			// Quebre o parâmetro "pagina" em partes
+			$p = explode("/", $_GET["pagina"]);
+			$pagina = $p[0] ?? "home"; // Atribua o primeiro valor à variável $pagina
+			$codigo = $p[1] ?? null;   // Atribua o segundo valor à variável $codigo, se existir
 		}
 
-		$page = $p[0] ?? "home";
-		$jogo = $p[1] ?? NULL;
-
-		if ($page == "jogo") {
-			$pagina = "jogo/{$jogo}.php";
+		// Determine o caminho do arquivo com base na página
+		if ($pagina == "jogo" && $codigo) {
+			$caminho = "jogo/{$codigo}.php";
 		} else {
-			$pagina = "paginas/{$page}.php";
+			$caminho = "paginas/{$pagina}.php";
 		}
 
-		if (file_exists($pagina)) {
-			include $pagina;
+		// Inclua o arquivo se ele existir, caso contrário, inclua a página de erro
+		if (file_exists($caminho)) {
+			include $caminho;
 		} else {
 			include "paginas/erro.php";
 		}
-
 		?>
 	</main>
+
 
 	<footer>
 		<div id="suporte" class="footerContainer">
@@ -131,6 +138,7 @@
 			</div>
 		</div>
 	</footer>
+
 
 
 	<script src="js/bootstrap.bundle.min.js"></script>

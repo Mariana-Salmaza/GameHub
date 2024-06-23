@@ -1,16 +1,19 @@
 $background-primary: #171a21;
-;
 $background-secondary: #333333;
 
-$secondary: #89c220;
-$hover: #bfeb6d;
+$primary: #bdd80e;
+$hover: #cde720;
+
+
+$background: #333435;
+$background-sec: #242323;
+
 $margin: 10px;
 $font1: "Jersey 25", Inter, Arial;
 $font: "Roboto Condensed", Arial, Tahoma;
 
 .navbar {
-    background: #171a21;
-    ;
+    background: $background;
 
     .navbar-brand img {
         height: 90px;
@@ -22,12 +25,12 @@ $font: "Roboto Condensed", Arial, Tahoma;
         text-transform: uppercase;
 
         &:hover {
-            color: greenyellow;
+            color: $primary;
         }
     }
 
     .navbar-nav .nav-link.show {
-        color: $secondary;
+        color: $primary;
     }
 
     .navbar-collapse {
@@ -42,16 +45,16 @@ $font: "Roboto Condensed", Arial, Tahoma;
     .dropdown-menu {
         background: $background-primary;
         border-radius: 0;
-        border-top: 5px solid $secondary;
+        border-top: 5px solid $primary;
 
         .dropdown-item {
             font: 16px $font;
             text-transform: uppercase;
             font-weight: bold;
-            color: $secondary;
+            color: $primary;
 
             &:hover {
-                color: $secondary;
+                color: $primary;
             }
         }
     }
@@ -59,12 +62,14 @@ $font: "Roboto Condensed", Arial, Tahoma;
     .btn {
         font: 20px $font;
         border-radius: 0;
-        color: $secondary;
+        color: $primary;
+        text-align: center;
 
         .btn-info {
             background-color: black;
             color: #FFFFFF;
             justify-items: center;
+
 
         }
     }
@@ -74,16 +79,10 @@ $font: "Roboto Condensed", Arial, Tahoma;
 
 
 body {
-    background-color: $background-secondary;
-
-
-}
-
-
-section {
-    padding: 20px 0px;
+    background-color: $background;
 
 }
+
 
 .flex {
     display: flex;
@@ -123,27 +122,75 @@ h2 {
 
 }
 
-.who-we-are {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 0px;
-    color: #FFFFFF;
-    padding: 10% 25% 15% 25%;
-    font: 100% $font;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-// .emphasis {
-//     color: #89c220;
-//     padding-top: 0px;
-// }
+.who-we-are {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 
-// .games {
-//     color: #89c220;
-//     padding-top: 0px;
-// }
+    h2 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .custom-card {
+        background-color: #242323;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        padding: 20px;
+        margin: 0 auto;
+        animation: fadeIn 1s ease-in-out;
+
+        .custom-card-body {
+            padding: 20px;
+
+            .fonte-diferente {
+                font: $font1;
+                font-size: 1rem;
+                line-height: 1.6;
+                color: white;
+            }
+        }
+    }
+}
+
+.team {
+    .custom-photo-card {
+        animation: fadeIn 1s ease-in-out;
+        border: 2px solid #ddd;
+
+
+        .card-img-top {
+            object-fit: cover;
+            height: 200px;
+            width: 100%;
+        }
+
+        .card-body {
+            padding: 20px;
+
+            .text-center-color {
+                text-align: center;
+                color: #333;
+            }
+        }
+    }
+}
 
 
 .carousel-item {
@@ -164,76 +211,55 @@ h2 {
 
 
 .text-center {
-    color: greenyellow;
+    color: $primary;
     padding: 3%;
     display: flex;
     justify-content: center;
 
 }
 
-.col-md-3 {
-    padding: 2% 4%;
-    margin: auto;
-}
 
 
 .text-center-color {
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: #242323;
     font: $font1;
 }
 
 .text-center-strong {
-    color: black;
+    color: white;
     text-align: center;
     font: 20px "Roboto Condensed", Arial, Tahoma;
-    background-color: white;
+    background-color: $background-sec;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
 }
 
 h2 {
-    color: $secondary;
+    color: $primary;
     text-transform: uppercase;
     font: 10px solid $font;
 }
 
 .btn-info {
     font: 18px "Roboto Condensed", Arial, Tahoma;
-    background-color: greenyellow;
+    background-color: $primary;
 
     &:hover {
-        background-color: rgb(131, 218, 2);
+        background-color: $hover;
     }
 
     border: initial;
 }
 
-// .footer {
-//     color: #FFFFFF;
-//     background: #171a21;
-//     padding: 2% 2%;
-//     text-align: center;
-//     height: 12vh;
-//     margin: 5vh 0 0 0;
-//     p {
-//         margin: 0;
-//         font-size: 1rem;
-//     }
-// }
 
-
-
-.row {
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-}
 
 .col-12 {
     color: white;
     font: 20px "Roboto Condensed", Arial, Tahoma;
 
     .imgcapa {
-        height: 100%;
+        width: 100%;
 
     }
 }
@@ -244,13 +270,52 @@ h2 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    text-transform: uppercase;
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .gallery-item {
+        max-width: 19vw;
+        justify-content: center; // Centraliza o item na coluna
+        border: 1px solid #ddd;
+        border-radius: 5px;
+
+
+        img {
+            max-width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            transition: transform 0.2s;
+            border: 2px solid #ddd;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+.gallery-container {
+    width: 100%;
+    display: flex;
+    gap: 0 10px 0 10px;
+    flex-direction: row;
     justify-content: space-between;
 
+}
+
+
+.row {
+    align-items: center;
+    margin: auto;
+    padding: 0 9vw;
+    justify-content: space-between;
 }
 
 .card {
@@ -259,12 +324,16 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 1px solid #ddd;
+
+    
 
     .card-img-top {
         width: 100%;
         height: 200px;
         /* Defina a altura fixa desejada */
         object-fit: cover;
+        border: 1px solid #ddd;
 
         /* Garante que a imagem cubra o espaço definido */
         .card-body {
@@ -295,46 +364,67 @@ h2 {
 
 .footerContainer {
     width: 100%;
-    padding: 70px 30px 20px;
+    padding: 10px 0 0;
+    margin: 50px 0 0 0;
+    background-color: $background-sec;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; // Para centralizar verticalmente em telas menores
+
+    @media (min-width: 600px) {
+        flex-direction: row; // Em telas maiores, alinhar em linha
+    }
 
     .socialIcons {
         display: flex;
         justify-content: center;
 
         a {
-            text-decoration: none;
             padding: 10px;
-            background-color: black;
-            margin: 10px;
+            background-color: initial;
             border-radius: 50%;
 
-            a i {
-                font-size: 2.5rem;
+            i {
+                font-size: 30px; // Ajuste conforme necessário
                 color: white;
             }
+        }
+    }
 
+    .footerBottom {
+        background-color: $background-sec;
+        padding: 10px;
+        text-align: center;
+
+        p {
+            color: white;
+            margin: initial;
 
         }
-
     }
-
-
 }
 
-.footerBottom {
-    background-color: #000;
-    padding: 20px;
+.form {
+    padding: 0 25vw;
+}
+.form-label {
+    color: white;
+}
+
+.btn {
+    background-color: $primary;
+    border: none;
+    color: black;
+    &:hover {
+        background-color: $hover;
+        color: black!important;
+    }
+}
+
+.game {
+    text-transform: uppercase;
+    color: $primary;
+    padding: 60px 0 20px 0;
     text-align: center;
 
-    P {
-        color: white;
-    }
-
-    .designer {
-        opacity: 0.7;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: 400;
-        margin: 0px 1px;
-    }
 }
