@@ -2,11 +2,11 @@
     header('Access-Control-Allow-Origin: *');
     header("Content-type: application/json; charset=utf-8");
 
-    $meuPath = "http://localhost/GameHub/imagens/";
-    $diegoPath = "http://localhost/GameHub/DiegoKume/imagens_jogo/";
-    $julioPath = "http://localhost/GameHub/Julio/";
-    $luizPath = "http://localhost/GameHub/Luiz/imgs/";
-    $MayconPath = "http://localhost/GameHub/Maycon/";
+    $meuPath = "https://gamehub-connect.000webhostapp.com/imagens/";
+    $diegoPath = "https://gamehub-connect.000webhostapp.com/DiegoKume/imagens_jogo/";
+    $julioPath = "https://gamehub-connect.000webhostapp.com/Julio/";
+    $luizPath = "https://gamehub-connect.000webhostapp.com/Luiz/imgs/";
+    $MayconPath = "https://gamehub-connect.000webhostapp.com/Maycon/";
 
 
     $fotos[1] = array(
@@ -24,24 +24,24 @@
     );
 
     $fotos[3] = array(
-        array("foto"=>"{$julioPath}fotoGameJ.jpeg"),
-        array("foto"=>"{$julioPath}fotoGameJ2.jpeg"),
-        array("foto"=>"{$julioPath}foto1.png"),
-        array("foto"=>"{$julioPath}foto2.png"),
+        array("foto"=>"{$julioPath}1.png"),
+        array("foto"=>"{$julioPath}2.png"),
+        array("foto"=>"{$julioPath}3.png"),
+        array("foto"=>"{$julioPath}4.png"),
     );
 
     $fotos[4] = array(
-        array("foto"=>"{$luizPath}fotojogoLuiz1.jpeg"),
-        array("foto"=>"{$luizPath}fotojogoLuiz2.jpeg"),
-        array("foto"=>"{$luizPath}foto1.png"),
-        array("foto"=>"{$luizPath}foto2.png"),
+        array("foto"=>"{$luizPath}1.png"),
+        array("foto"=>"{$luizPath}2.png"),
+        array("foto"=>"{$luizPath}3.png"),
+        array("foto"=>"{$luizPath}4.png"),
     );
 
     $fotos[5] = array(
-        array("foto"=>"{$MayconPath}bannerMaycon.png"),
-        array("foto"=>"{$MayconPath}footoM1.png"),
-        array("foto"=>"{$MayconPath}fotoM2.png"),
-        array("foto"=>"{$MayconPath}fotoM3.png"),
+        array("foto"=>"{$MayconPath}1.png"),
+        array("foto"=>"{$MayconPath}2.png"),
+        array("foto"=>"{$MayconPath}3.png"),
+        array("foto"=>"{$MayconPath}4.png"),
     );
 
 

@@ -8,15 +8,15 @@
 	<meta name="description" content="Seu site de Jogos, com lançamentos e jogos gratuitos">
 	<meta name="keywords" content="Games, Jogos, Lançamentos">
 
-	<base href="http://localhost/GameHub/">
-
+	<base href="https://gamehub-connect.000webhostapp.com/">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/all.min.css">
@@ -29,13 +29,10 @@
 
 
 
-
-
-
 <body>
 
 	<?php
-	$url = "http://localhost/GameHub/api/games.php";
+	$url = "https://gamehub-connect.000webhostapp.com/api/games.php";
 
 	$dadosJson = file_get_contents($url);
 

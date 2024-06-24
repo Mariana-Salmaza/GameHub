@@ -1,7 +1,7 @@
 <?php
 // URL da API para obter os dados dos jogos
-$apiGames = "http://localhost/GameHub/api/games.php";
-$apiBanner = "http://localhost/GameHub/api/banner.php";
+$apiGames = "https://gamehub-connect.000webhostapp.com/api/games.php";
+$apiBanner = "https://gamehub-connect.000webhostapp.com/api/banner.php";
 
 // Obtém o conteúdo JSON da URL
 $jsonGames = file_get_contents($apiGames);
@@ -16,7 +16,7 @@ $dadosBanner = json_decode($JsonBanner);
     <div class="carousel-inner">
         <div class="carousel-item active">
             <a href="gamesPage/1">
-                <img src="http://localhost/GameHub/imagens/bannerMeu.png " class="d-block w-100" alt="Enemy War">
+                <img src="https://gamehub-connect.000webhostapp.com/imagens/bannerMeu.png " class="d-block w-100 img-fluid" alt="Enemy War">
             </a>
         </div>
 
@@ -47,7 +47,7 @@ $dadosBanner = json_decode($JsonBanner);
 
 
 <div class="container">
-    <h1 class="text-center">Lançamentos:</h1>
+    <h1 class="text-center">LANÇAMENTOS:</h1>
     <div class="row">
 
         <?php

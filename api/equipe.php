@@ -2,7 +2,7 @@
 header('Access-Control-Allow-Origin: *');
 header("Content-type: application/json; charset=utf-8");
 
-$path = "http://localhost/GameHub/imagens/";
+$path = "https://gamehub-connect.000webhostapp.com/imagens/";
 
 $equipe = array(
     array("nome" => "Mariana Salmaza", "cargo" => "Desenvolvedora do site GameHub", "foto" => "{$path}Eu.png"),

@@ -2,8 +2,8 @@
 
 $id = $p[1] ?? NULL;
 
-$dadosApi = file_get_contents("http://localhost/GameHub/api/games.php/");
-$fotosApi = file_get_contents("http://localhost/GameHub/api/galeriaFotos.php/");
+$dadosApi = file_get_contents("https://gamehub-connect.000webhostapp.com/api/games.php/");
+$fotosApi = file_get_contents("https://gamehub-connect.000webhostapp.com/api/galeriaFotos.php/");
 
 $dadosApi = json_decode($dadosApi);
 $fotos = json_decode($fotosApi);
@@ -32,7 +32,7 @@ $dados = $dadosJogos->$codigo;
             <h3 class="text-center mt-4">IMAGENS DO JOGO</h3>
             <div class="gallery-container">
                 <?php
-                $dadosFotos = file_get_contents("http://localhost/GameHub/api/galeriaFotos.php/");
+                $dadosFotos = file_get_contents("https://gamehub-connect.000webhostapp.com/api/galeriaFotos.php/");
                 $dadosFotos = json_decode($dadosFotos);
 
                 $dados = $dadosFotos->$codigo;
@@ -55,12 +55,13 @@ $dados = $dadosJogos->$codigo;
         </div>
 
         <section id="meu-game">
-            <h3 class="game">Meu game</h3>
+            <h3 class="game">JOGUE AGORA</h3>
             <iframe width="100%" height="600vh" src="<?= $jogo->jogo ?>"></iframe>
 
-            <p>
-                <a href="<?= $jogo->jogo ?>" class="btn" target="-black"><br>Abrir jogo em uma nova aba<br><br></a>
+            <p class="text-center">
+                <a href="<?= $jogo->jogo ?>" class="btn btn-custom" target="_blank"><br>Abrir em outra aba<br><br></a>
             </p>
+
 
         </section>
 

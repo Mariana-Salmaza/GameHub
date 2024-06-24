@@ -9,7 +9,6 @@ $background: #333435;
 $background-sec: #242323;
 
 $margin: 10px;
-$font1: "Jersey 25", Inter, Arial;
 $font: "Roboto Condensed", Arial, Tahoma;
 
 .navbar {
@@ -54,7 +53,7 @@ $font: "Roboto Condensed", Arial, Tahoma;
             color: $primary;
 
             &:hover {
-                color: $primary;
+                background-color: #4da734;
             }
         }
     }
@@ -67,11 +66,10 @@ $font: "Roboto Condensed", Arial, Tahoma;
 
         .btn-info {
             background-color: black;
-            color: #FFFFFF;
             justify-items: center;
 
-
         }
+       
     }
 
 
@@ -80,6 +78,7 @@ $font: "Roboto Condensed", Arial, Tahoma;
 
 body {
     background-color: $background;
+    font-family: 'Roboto Condensed', sans-serif;
 
 }
 
@@ -116,7 +115,7 @@ body {
 }
 
 h2 {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     text-align: center;
     margin: 20px 0;
 
@@ -140,10 +139,11 @@ h2 {
     align-items: center;
     padding: 20px;
 
-    h2 {
+    h1 {
         margin-bottom: 20px;
         font-size: 2rem;
         text-align: center;
+        color: $primary;
     }
 
     .custom-card {
@@ -160,7 +160,7 @@ h2 {
             padding: 20px;
 
             .fonte-diferente {
-                font: $font1;
+                font: $font;
                 font-size: 1rem;
                 line-height: 1.6;
                 color: white;
@@ -169,23 +169,36 @@ h2 {
     }
 }
 
-.team {
+.team-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 9vh;
+
     .custom-photo-card {
         animation: fadeIn 1s ease-in-out;
         border: 2px solid #ddd;
-
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 90%;
 
         .card-img-top {
             object-fit: cover;
-            height: 200px;
+            height: 350px;
             width: 100%;
         }
 
         .card-body {
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
 
             .text-center-color {
-                text-align: center;
                 color: #333;
             }
         }
@@ -201,11 +214,10 @@ h2 {
     margin-right: -100%;
     overflow: hidden;
 
-    .carousel-item img {
-        max-width: 100%;
-        max-height: 300vh;
-    }
+}
 
+.d-block {
+    object-fit: cover;
 }
 
 
@@ -223,7 +235,7 @@ h2 {
 .text-center-color {
     color: white;
     background-color: #242323;
-    font: $font1;
+    font: $font;
 }
 
 .text-center-strong {
@@ -246,7 +258,7 @@ h2 {
     background-color: $primary;
 
     &:hover {
-        background-color: $hover;
+        background-color: #4da734;
     }
 
     border: initial;
@@ -262,6 +274,7 @@ h2 {
         width: 100%;
 
     }
+    
 }
 
 
@@ -282,7 +295,7 @@ h2 {
 
     .gallery-item {
         max-width: 19vw;
-        justify-content: center; // Centraliza o item na coluna
+        justify-content: center; 
         border: 1px solid #ddd;
         border-radius: 5px;
 
@@ -315,7 +328,6 @@ h2 {
     align-items: center;
     margin: auto;
     padding: 0 9vw;
-    justify-content: space-between;
 }
 
 .card {
@@ -326,16 +338,16 @@ h2 {
     justify-content: space-between;
     border: 1px solid #ddd;
 
-    
+
 
     .card-img-top {
         width: 100%;
         height: 200px;
-        /* Defina a altura fixa desejada */
-        object-fit: cover;
-        border: 1px solid #ddd;
 
-        /* Garante que a imagem cubra o espaço definido */
+        object-fit: cover;
+        border: 1px solid #ddd; 
+
+
         .card-body {
             flex-grow: 1;
             display: flex;
@@ -353,7 +365,7 @@ h2 {
 
 .bannermeu {
     width: 100%;
-    height: 65vh;
+    object-fit: cover;
 }
 
 
@@ -369,10 +381,9 @@ h2 {
     background-color: $background-sec;
     justify-content: center;
     align-items: center;
-    flex-direction: column; // Para centralizar verticalmente em telas menores
-
+    flex-direction: column; 
     @media (min-width: 600px) {
-        flex-direction: row; // Em telas maiores, alinhar em linha
+        flex-direction: row; 
     }
 
     .socialIcons {
@@ -385,7 +396,7 @@ h2 {
             border-radius: 50%;
 
             i {
-                font-size: 30px; // Ajuste conforme necessário
+                font-size: 30px; 
                 color: white;
             }
         }
@@ -406,18 +417,30 @@ h2 {
 
 .form {
     padding: 0 25vw;
+    .btn-success {
+        background-color: #bdd80e;
+        color: black;
+        border: initial;
+    }
 }
+
+
 .form-label {
     color: white;
 }
 
-.btn {
+.btn-custom {
     background-color: $primary;
     border: none;
     color: black;
+    padding: 0 5px; 
+    font-size: 15px; 
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed';
+
     &:hover {
         background-color: $hover;
-        color: black!important;
+        color: black !important;
     }
 }
 
