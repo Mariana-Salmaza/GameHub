@@ -2,11 +2,11 @@
     header('Access-Control-Allow-Origin: *');
     header("Content-type: application/json; charset=utf-8");
 
-    $meuPath = "https://gamehub-connect.000webhostapp.com/imagens/";
-    $diegoPath = "https://gamehub-connect.000webhostapp.com/DiegoKume/imagens_jogo/";
-    $julioPath = "https://gamehub-connect.000webhostapp.com/Julio/";
-    $luizPath = "https://gamehub-connect.000webhostapp.com/Luiz/imgs/";
-    $MayconPath = "https://gamehub-connect.000webhostapp.com/Maycon/";
+    $meuPath = "http://gamehub-connect.000webhostapp.com/imagens/";
+    $diegoPath = "http://gamehub-connect.000webhostapp.com/DiegoKume/imagens_jogo/";
+    $julioPath = "http://gamehub-connect.000webhostapp.com/Julio/";
+    $luizPath = "http://gamehub-connect.000webhostapp.com/Luiz/imgs/";
+    $MayconPath = "http://gamehub-connect.000webhostapp.com/Maycon/";
 
 
     $fotos[1] = array(

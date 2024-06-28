@@ -33,7 +33,8 @@
   color: #bdd80e;
 }
 .navbar .dropdown-menu .dropdown-item:hover {
-  background-color: #4da734;
+  background-color: #edff79;
+  color: #333435;
 }
 .navbar .btn {
   font: 20px "Roboto Condensed", Arial, Tahoma;
@@ -101,9 +102,7 @@ h2 {
 }
 .who-we-are h1 {
   margin-bottom: 20px;
-  font-size: 2rem;
   text-align: center;
-  color: #bdd80e;
 }
 .who-we-are .custom-card {
   background-color: #242323;
@@ -118,9 +117,15 @@ h2 {
 .who-we-are .custom-card .custom-card-body {
   padding: 20px;
 }
+.who-we-are .custom-card .custom-card-body .card-img-dev {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
 .who-we-are .custom-card .custom-card-body .fonte-diferente {
   font: "Roboto Condensed", Arial, Tahoma;
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.6;
   color: white;
 }
@@ -139,11 +144,6 @@ h2 {
   justify-content: space-between;
   height: 100%;
   width: 90%;
-}
-.team-row .custom-photo-card .card-img-top {
-  object-fit: cover;
-  height: 350px;
-  width: 100%;
 }
 .team-row .custom-photo-card .card-body {
   padding: 20px;
@@ -171,7 +171,7 @@ h2 {
 }
 
 .text-center {
-  color: #bdd80e;
+  color: white;
   padding: 3%;
   display: flex;
   justify-content: center;
@@ -191,11 +191,14 @@ h2 {
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
 }
+.text-center-strong p {
+  display: flex;
+  justify-content: space-evenly;
+}
 
 h2 {
   color: #bdd80e;
-  text-transform: uppercase;
-  font: 10px solid "Roboto Condensed", Arial, Tahoma;
+  font: "Roboto Condensed", Arial, Tahoma;
 }
 
 .btn-info {
@@ -204,12 +207,12 @@ h2 {
   border: initial;
 }
 .btn-info:hover {
-  background-color: #4da734;
+  background-color: #edff79;
 }
 
 .col-12 {
   color: white;
-  font: 20px "Roboto Condensed", Arial, Tahoma;
+  font: 22px "Roboto Condensed", Arial, Tahoma;
 }
 .col-12 .imgcapa {
   width: 100%;
@@ -217,9 +220,8 @@ h2 {
 
 .Container {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  text-transform: uppercase;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .container {
@@ -270,7 +272,7 @@ h2 {
 }
 .card .card-img-top {
   width: 100%;
-  height: 200px;
+  height: 25vh;
   object-fit: cover;
   border: 1px solid #ddd;
 }
@@ -279,9 +281,6 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.card .card-img-top .card-body .card-body p {
-  margin: 10px 0;
 }
 
 .bannermeu {
@@ -338,6 +337,9 @@ h2 {
   color: black;
   border: initial;
 }
+.form .btn-success:hover {
+  background-color: #edff79;
+}
 
 .form-label {
   color: white;
@@ -353,15 +355,19 @@ h2 {
   font-family: 'Roboto Condensed';
 }
 .btn-custom:hover {
-  background-color: #cde720;
+  background-color: #edff79;
   color: black !important;
 }
 
 .game {
-  text-transform: uppercase;
   color: #bdd80e;
   padding: 60px 0 20px 0;
   text-align: center;
+}
+
+.fonte-titulo {
+  font-size: 2.8rem;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

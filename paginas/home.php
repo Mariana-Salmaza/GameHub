@@ -1,7 +1,7 @@
 <?php
 // URL da API para obter os dados dos jogos
-$apiGames = "https://gamehub-connect.000webhostapp.com/api/games.php";
-$apiBanner = "https://gamehub-connect.000webhostapp.com/api/banner.php";
+$apiGames = "http://gamehub-connect.000webhostapp.com/api/games.php";
+$apiBanner = "http://gamehub-connect.000webhostapp.com/api/banner.php";
 
 // Obtém o conteúdo JSON da URL
 $jsonGames = file_get_contents($apiGames);
@@ -16,7 +16,7 @@ $dadosBanner = json_decode($JsonBanner);
     <div class="carousel-inner">
         <div class="carousel-item active">
             <a href="gamesPage/1">
-                <img src="https://gamehub-connect.000webhostapp.com/imagens/bannerMeu.png " class="d-block w-100 img-fluid" alt="Enemy War">
+                <img src="http://gamehub-connect.000webhostapp.com/imagens/bannerMeu.png " class="d-block w-100 img-fluid" alt="Enemy War">
             </a>
         </div>
 
@@ -47,7 +47,7 @@ $dadosBanner = json_decode($JsonBanner);
 
 
 <div class="container">
-    <h1 class="text-center">LANÇAMENTOS:</h1>
+    <h1 class="text-center fonte-titulo">LANÇAMENTOS</h1>
     <div class="row">
 
         <?php
@@ -60,7 +60,7 @@ $dadosBanner = json_decode($JsonBanner);
                     <div class="card-body text-center-strong">
                         <p><strong><?= $dados->nome ?></strong></p>
                         <p>
-                            <a href="gamesPage/<?= $dados->id ?>" title="Detalhes" class="btn btn-info me-5">
+                            <a href="gamesPage/<?= $dados->id ?>" title="Detalhes" class="btn btn-info">
                                 <i class="fas fa-search"></i> Detalhes
                             </a>
                             <a href="<?= $dados->jogo ?>" title="Jogar" class="btn btn-info">

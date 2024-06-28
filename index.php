@@ -8,7 +8,7 @@
 	<meta name="description" content="Seu site de Jogos, com lançamentos e jogos gratuitos">
 	<meta name="keywords" content="Games, Jogos, Lançamentos">
 
-	<base href="https://gamehub-connect.000webhostapp.com/">
+	<base href="http://gamehub-connect.000webhostapp.com/">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,7 @@
 <body>
 
 	<?php
-	$url = "https://gamehub-connect.000webhostapp.com/api/games.php";
+	$url = "http://gamehub-connect.000webhostapp.com/api/games.php";
 
 	$dadosJson = file_get_contents($url);
 

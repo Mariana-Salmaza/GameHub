@@ -2,7 +2,7 @@
     header('Access-Control-Allow-Origin: *');
     header("Content-type: application/json; charset=utf-8");
 
-    $path = "https://gamehub-connect.000webhostapp.com/imagens/";
+    $path = "http://gamehub-connect.000webhostapp.com/imagens/";
 
     $banners[1] = array("nome"=>"Enemy War","imagem"=>"{$path}bannerMeu.png","id_game"=>1);
     $banners[2] = array("nome"=>"Space Soldier Survival","imagem"=>"{$path}bannerjogo1D.png","id_game"=>2);

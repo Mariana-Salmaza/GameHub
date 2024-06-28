@@ -2,7 +2,7 @@ $background-primary: #171a21;
 $background-secondary: #333333;
 
 $primary: #bdd80e;
-$hover: #cde720;
+$hover: #edff79;
 
 
 $background: #333435;
@@ -53,7 +53,8 @@ $font: "Roboto Condensed", Arial, Tahoma;
             color: $primary;
 
             &:hover {
-                background-color: #4da734;
+                background-color: $hover;
+                color: $background;
             }
         }
     }
@@ -141,9 +142,7 @@ h2 {
 
     h1 {
         margin-bottom: 20px;
-        font-size: 2rem;
         text-align: center;
-        color: $primary;
     }
 
     .custom-card {
@@ -158,10 +157,16 @@ h2 {
 
         .custom-card-body {
             padding: 20px;
+            .card-img-dev {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border: 1px solid #ddd; 
+            }
 
             .fonte-diferente {
                 font: $font;
-                font-size: 1rem;
+                font-size: 1.3rem;
                 line-height: 1.6;
                 color: white;
             }
@@ -183,13 +188,6 @@ h2 {
         justify-content: space-between;
         height: 100%;
         width: 90%;
-
-        .card-img-top {
-            object-fit: cover;
-            height: 350px;
-            width: 100%;
-        }
-
         .card-body {
             padding: 20px;
             display: flex;
@@ -200,6 +198,7 @@ h2 {
 
             .text-center-color {
                 color: #333;
+                
             }
         }
     }
@@ -223,7 +222,7 @@ h2 {
 
 
 .text-center {
-    color: $primary;
+    color: white;
     padding: 3%;
     display: flex;
     justify-content: center;
@@ -241,24 +240,28 @@ h2 {
 .text-center-strong {
     color: white;
     text-align: center;
-    font: 20px "Roboto Condensed", Arial, Tahoma;
+    font: 20px $font;
     background-color: $background-sec;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
+    
+    p {
+        display: flex;
+        justify-content: space-evenly;
+    }
 }
 
 h2 {
     color: $primary;
-    text-transform: uppercase;
-    font: 10px solid $font;
+    font: $font;
 }
 
 .btn-info {
-    font: 18px "Roboto Condensed", Arial, Tahoma;
+    font: 18px $font;
     background-color: $primary;
 
     &:hover {
-        background-color: #4da734;
+        background-color: $hover;
     }
 
     border: initial;
@@ -268,7 +271,7 @@ h2 {
 
 .col-12 {
     color: white;
-    font: 20px "Roboto Condensed", Arial, Tahoma;
+    font: 22px $font;
 
     .imgcapa {
         width: 100%;
@@ -281,9 +284,8 @@ h2 {
 
 .Container {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    text-transform: uppercase;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .container {
@@ -338,11 +340,9 @@ h2 {
     justify-content: space-between;
     border: 1px solid #ddd;
 
-
-
     .card-img-top {
         width: 100%;
-        height: 200px;
+        height: 25vh;
 
         object-fit: cover;
         border: 1px solid #ddd; 
@@ -354,9 +354,7 @@ h2 {
             flex-direction: column;
             justify-content: space-between;
 
-            .card-body p {
-                margin: 10px 0;
-            }
+            
         }
 
     }
@@ -418,9 +416,13 @@ h2 {
 .form {
     padding: 0 25vw;
     .btn-success {
-        background-color: #bdd80e;
+        background-color: $primary;
         color: black;
         border: initial;
+
+        &:hover {
+            background-color: $hover;
+        }
     }
 }
 
@@ -445,9 +447,14 @@ h2 {
 }
 
 .game {
-    text-transform: uppercase;
     color: $primary;
     padding: 60px 0 20px 0;
     text-align: center;
 
+}
+
+
+.fonte-titulo {
+    font-size: 2.8rem;
+    color: white;
 }
